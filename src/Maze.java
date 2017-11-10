@@ -1,9 +1,9 @@
-/**
+/**********************************************
  * CS 1302 Final Project - The Maze
  * Created by Jack Smith and Austin Pettit
  * CS1302/07 - T. Kilinc
  * Fall 2017
- */
+ *********************************************/
 public class Maze {
 
     private char location;
