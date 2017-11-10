@@ -1,7 +1,8 @@
 /**
- * Created by jsmi1018 on 11/4/2017
- * 1302/07 Jack Smith
- * PACKAGE_NAME
+ * CS 1302 Final Project - The Maze
+ * Created by Jack Smith and Austin Pettit
+ * CS1302/07 - T. Kilinc
+ * Fall 2017
  */
 public class Maze {
 
