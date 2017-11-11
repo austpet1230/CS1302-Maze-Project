@@ -46,8 +46,10 @@ public class MazeGUI extends Application{
         buttonBox.getChildren().addAll(btStartMaze, btQuit);
 
         btStartMaze.setOnAction(e->{
+            // ACTIVATES GAME WINDOW WITH MAZE
             BorderPane gameLayout = new BorderPane();
-            gameLayout.setCenter(new MazePane());
+            MazePane mazePane = new MazePane();
+            gameLayout.setCenter(mazePane);
 
             HBox gameButtons = new HBox(5);
             gameButtons.setAlignment(Pos.CENTER);
@@ -56,6 +58,8 @@ public class MazeGUI extends Application{
             Button btTakeStep = new Button("Take Step");
             btTakeStep.setPrefSize(200, 30);
             btTakeStep.setStyle("-fx-base: #5eceff");
+
+            btTakeStep.setOnAction(step->mazePane.takeStep());
 
             Button btSolveMaze = new Button("Solve Maze");
             btSolveMaze.setPrefSize(200, 30);
@@ -87,6 +91,7 @@ class MazePane extends GridPane {
     private Maze maze;
     private Image wallImg = new Image("img/stonetexture.JPG");
     private Image pathImg = new Image("img/pathtexture.jpg");
+    private Image currentPathImg = new Image("img/currentPathTexture.jpg");
     private int[][] mazePath = {
             {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
             {0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0},
@@ -109,20 +114,36 @@ class MazePane extends GridPane {
     public MazePane(){
         // create new instance of maze with the maze, mazePath
         maze = new Maze(mazePath);
+        updateImages();
+    }
 
-        // create grid pane and fill with appropriate texture
+    public void updateImages(){
         for(int i = 0; i < mazePath.length; i++){
             for(int j = 0; j < mazePath[i].length; j++){
-                if(mazePath[i][j] == 0) {
-                    add(new ImageView(wallImg), j, i);
-                } else if (mazePath[i][j] == 1){
-                    add(new ImageView(pathImg), j, i);
+                switch(mazePath[i][j]){
+                    case 0:
+                        // wall
+                        add(new ImageView(wallImg), j, i);
+                        break;
+                    case 1:
+                        // path
+                        add(new ImageView(pathImg), j, i);
+                        break;
+                    case 2:
+                        // travelled
+                        add(new ImageView(pathImg), j, i);
+                        break;
+                    case 3:
+                        // current position
+                        add(new ImageView(currentPathImg), j, i);
+                        break;
                 }
             }
         }
     }
 
     public void takeStep(){
-
+        maze.takeStep();
+        updateImages();
     }
 }

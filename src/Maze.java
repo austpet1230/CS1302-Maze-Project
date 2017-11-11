@@ -10,7 +10,7 @@ public class Maze {
     private int[][] mazePath;
     private int wall = 0, path = 1, travelled = 2, currentPos = 3;
     private char direction = 's';
-    protected boolean mazeSolved = false;
+    protected boolean mazeSolved = false, allowedToMove = false;
 
     public Maze(int[][] array){
         this.mazePath = array;
@@ -21,51 +21,59 @@ public class Maze {
     }
 
     public void takeStep(){
+        allowedToMove = true;
         for (int x = 0; x < mazePath.length; x++){
             for(int y = 0; y < mazePath[0].length; y++){
 
                 /*This is the first check where the maze checks the direction of you facing south
                 When there is no place to move that is new, it will backstep without changing the
                 direction. When a new place is found, to then changes the direction */
-                if (mazePath[x][y] == location && direction == 's') {
+                if (mazePath[x][y] == location && direction == 's' && allowedToMove) {
                     if (mazePath[x][y - 1] == path) {
                         mazePath[x][y - 1] = location;
                         mazePath[x][y] = travelled;
                         direction = 'w';
+                        allowedToMove = false;
                         break;
-                    } else if (mazePath[x + 1][y] == path) {
+                    } else if (mazePath[x + 1][y] == path && allowedToMove) {
                         mazePath[x + 1][y] = location;
                         mazePath[x][y] = travelled;
                         direction = 's';
+                        allowedToMove = false;
                         break;
-                    } else if (mazePath[x][y + 1] == path) {
+                    } else if (mazePath[x][y + 1] == path && allowedToMove) {
                         mazePath[x][y + 1] = location;
                         mazePath[x][y] = travelled;
                         direction = 'e';
+                        allowedToMove = false;
                         break;
                     } else {
-                        if (mazePath[x][y - 1] == travelled) {
+                        if (mazePath[x][y - 1] == travelled && allowedToMove) {
                             mazePath[x][y - 1] = location;
                             mazePath[x][y] = travelled; //checks west
                             direction = 'w';
+                            allowedToMove = false;
                             break;
                         }
-                        else if (mazePath[x + 1][y] == travelled) {
+                        else if (mazePath[x + 1][y] == travelled && allowedToMove) {
                             mazePath[x + 1][y] = location;
                             mazePath[x][y] = travelled; // checks south
                             direction = 's';
+                            allowedToMove = false;
                             break;
                         }
-                        else if (mazePath[x][y + 1] == travelled) {
+                        else if (mazePath[x][y + 1] == travelled && allowedToMove) {
                             mazePath[x][y + 1] = location;
                             mazePath[x][y] = travelled; // checks east
                             direction = 'e';
+                            allowedToMove = false;
                             break;
                         }
-                        if (mazePath[x - 1][y] == travelled) {
+                        if (mazePath[x - 1][y] == travelled && allowedToMove) {
                             mazePath[x - 1][y] = location;
                             mazePath[x][y] = travelled; //checks north
                             direction = 'n';
+                            allowedToMove = false;
                             break;
                         }
                     }
@@ -79,18 +87,21 @@ public class Maze {
                         mazePath[x - 1][y] = location;
                         mazePath[x][y] = travelled;
                         direction = 'n';
+                        allowedToMove = false;
                         break;
                     }
                     else if (mazePath[x][y - 1] == path) {
                         mazePath[x][y - 1] = location;
                         mazePath[x][y] = travelled;
                         direction = 'w';
+                        allowedToMove = false;
                         break;
                     }
                     else if (mazePath[x + 1][y] == path) {
                         mazePath[x + 1][y] = location;
                         mazePath[x][y] = travelled;
                         direction = 's';
+                        allowedToMove = false;
                         break;
                     }
                     else {
@@ -98,24 +109,28 @@ public class Maze {
                             mazePath[x - 1][y] = location;
                             mazePath[x][y] = travelled; //checks north
                             direction = 'n';
+                            allowedToMove = false;
                             break;
                         }
                         else if (mazePath[x][y - 1] == travelled) {
                             mazePath[x][y - 1] = location;
                             mazePath[x][y] = travelled; //checks west
                             direction = 'w';
+                            allowedToMove = false;
                             break;
                         }
                         else if (mazePath[x + 1][y] == travelled) {
                             mazePath[x + 1][y] = location;
                             mazePath[x][y] = travelled; // checks south
                             direction = 's';
+                            allowedToMove = false;
                             break;
                         }
                         else if (mazePath[x][y + 1] == travelled) {
                             mazePath[x][y + 1] = location;
                             mazePath[x][y] = travelled; // checks east
                             direction = 'e';
+                            allowedToMove = false;
                             break;
                         }
                     }
@@ -130,18 +145,21 @@ public class Maze {
                         mazePath[x + 1][y] = location;
                         mazePath[x][y] = travelled;
                         direction = 's';
+                        allowedToMove = false;
                         break;
                     }
                     else if (mazePath[x][y + 1] == path) {
                         mazePath[x][y + 1] = location;
                         mazePath[x][y] = travelled;
                         direction = 'e';
+                        allowedToMove = false;
                         break;
                     }
                     else if (mazePath[x - 1][y] == path) {
                         mazePath[x - 1][y] = location;
                         mazePath[x][y] = travelled;
                         direction = 'n';
+                        allowedToMove = false;
                         break;
                     }
                     else {
@@ -149,24 +167,28 @@ public class Maze {
                             mazePath[x + 1][y] = location;
                             mazePath[x][y] = travelled; // checks south
                             direction = 's';
+                            allowedToMove = false;
                             break;
                         }
                         else if(mazePath[x][y + 1] == travelled) {
                             mazePath[x][y + 1] = location;
                             mazePath[x][y] = travelled; // checks east
                             direction = 'e';
+                            allowedToMove = false;
                             break;
                         }
                         else if (mazePath[x - 1][y] == travelled) {
                             mazePath[x - 1][y] = location;
                             mazePath[x][y] = travelled; //checks north
                             direction = 'n';
+                            allowedToMove = false;
                             break;
                         }
                         else if (mazePath[x][y - 1] == travelled) {
                             mazePath[x][y - 1] = location;
                             mazePath[x][y] = travelled; //checks west
                             direction = 'w';
+                            allowedToMove = false;
                             break;
                         }
                     }
@@ -182,18 +204,21 @@ public class Maze {
                         mazePath[x][y + 1] = location;
                         mazePath[x][y] = travelled;
                         direction = 'e';
+                        allowedToMove = false;
                         break;
                     }
                     else if (mazePath[x - 1][y] == path) {
                         mazePath[x - 1][y] = location;
                         mazePath[x][y] = travelled;
                         direction = 'n';
+                        allowedToMove = false;
                         break;
                     }
                     else if (mazePath[x][y - 1] == path) {
                         mazePath[x][y - 1] = location;
                         mazePath[x][y] = travelled;
                         direction = 'w';
+                        allowedToMove = false;
                         break;
                     }
                     else {
@@ -201,24 +226,28 @@ public class Maze {
                             mazePath[x][y + 1] = location;
                             mazePath[x][y] = travelled; // checks east
                             direction = 'e';
+                            allowedToMove = false;
                             break;
                         }
                         else if (mazePath[x - 1][y] == travelled) {
                             mazePath[x - 1][y] = location;
                             mazePath[x][y] = travelled; //checks north
                             direction = 'n';
+                            allowedToMove = false;
                             break;
                         }
                         else if (mazePath[x][y - 1] == travelled) {
                             mazePath[x][y - 1] = location;
                             mazePath[x][y] = travelled; //checks west
                             direction = 'w';
+                            allowedToMove = false;
                             break;
                         }
                         else if (mazePath[x + 1][y] == travelled) {
                             mazePath[x + 1][y] = location;
                             mazePath[x][y] = travelled; // checks south
                             direction = 's';
+                            allowedToMove = false;
                             break;
                         }
                     }
