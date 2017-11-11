@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16770da7-eea7-4d05-bb8c-aa1da5cc2861" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MazeGUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MazeProject/Maze.class" afterPath="$PROJECT_DIR$/out/production/MazeProject/Maze.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MazeProject/TestMaze.class" afterPath="$PROJECT_DIR$/out/production/MazeProject/TestMaze.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -622,7 +621,7 @@
       <workItem from="1510348468787" duration="652000" />
       <workItem from="1510355240529" duration="272000" />
       <workItem from="1510356082541" duration="297000" />
-      <workItem from="1510367346816" duration="8905000" />
+      <workItem from="1510367346816" duration="8951000" />
     </task>
     <task id="LOCAL-00001" summary="idea update">
       <created>1510367435222</created>
@@ -638,11 +637,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510369744499</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="MazeGUI updated. Maze generates appropriate spaces for initial condition. Buttons are in place and ready for functionality programming.">
+      <created>1510382703230</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1510382703230</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25130000" />
+    <option name="totallyTimeSpent" value="25176000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1933" height="1053" extended-state="6" />
@@ -688,7 +694,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="idea update" />
     <MESSAGE value="Changed chars to int's, added menu to TestMaze.java to prevent StringIndexOutOfBoundsException" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed chars to int's, added menu to TestMaze.java to prevent StringIndexOutOfBoundsException" />
+    <MESSAGE value="MazeGUI updated. Maze generates appropriate spaces for initial condition. Buttons are in place and ready for functionality programming." />
+    <option name="LAST_COMMIT_MESSAGE" value="MazeGUI updated. Maze generates appropriate spaces for initial condition. Buttons are in place and ready for functionality programming." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
