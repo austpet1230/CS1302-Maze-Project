@@ -6,78 +6,65 @@
  *********************************************/
 public class Maze {
 
-    private char location;
-    private char[][] useableMaze;
-    private char wall = '#';
-    private char path = ' ';
+    private int location;
+    private int[][] mazePath;
+    private int wall = 0, path = 1, travelled = 2, currentPos = 3;
     private char direction = 's';
+    protected boolean mazeSolved = false;
 
     public Maze(int[][] array){
+        this.mazePath = array;
+        location = currentPos;
 
-        location = '@';
-
-        useableMaze = new char[array.length][array[0].length];
-
-        for(int i = 0; i < array.length; i++){
-            for (int j = 0; j < array[0].length; j++){
-                if (array[i][j] == 1){
-                    this.useableMaze[i][j] = path;
-                }
-                else{
-                    this.useableMaze[i][j] = wall;
-                }
-            }
-        }
-        this.useableMaze[0][2] = location;
+        mazePath[0][2] = currentPos;
+        direction = 's';
     }
 
     public void takeStep(){
-        char lastStep = '/';
-
-        for (int x = 0; x < useableMaze.length; x++){
-            for(int y = 0; y < useableMaze[0].length; y++){
+        for (int x = 0; x < mazePath.length; x++){
+            for(int y = 0; y < mazePath[0].length; y++){
 
                 /*This is the first check where the maze checks the direction of you facing south
                 When there is no place to move that is new, it will backstep without changing the
                 direction. When a new place is found, to then changes the direction */
-                if (useableMaze[x][y] == location && direction == 's') {
-                    if (useableMaze[x][y - 1] == path) {
-                        useableMaze[x][y - 1] = location;
-                        useableMaze[x][y] = lastStep;
+                if (mazePath[x][y] == location && direction == 's') {
+                    if (mazePath[x][y - 1] == path) {
+                        mazePath[x][y - 1] = location;
+                        mazePath[x][y] = travelled;
                         direction = 'w';
                         break;
-                    } else if (useableMaze[x + 1][y] == path) {
-                        useableMaze[x + 1][y] = location;
-                        useableMaze[x][y] = lastStep;
+                    } else if (mazePath[x + 1][y] == path) {
+                        mazePath[x + 1][y] = location;
+                        mazePath[x][y] = travelled;
                         direction = 's';
                         break;
-                    } else if (useableMaze[x][y + 1] == path) {
-                        useableMaze[x][y + 1] = location;
-                        useableMaze[x][y] = lastStep;
+                    } else if (mazePath[x][y + 1] == path) {
+                        mazePath[x][y + 1] = location;
+                        mazePath[x][y] = travelled;
                         direction = 'e';
                         break;
                     } else {
-                        if (useableMaze[x][y - 1] == lastStep) {
-                            useableMaze[x][y - 1] = location;
-                            useableMaze[x][y] = lastStep; //checks west
+                        if (mazePath[x][y - 1] == travelled) {
+                            mazePath[x][y - 1] = location;
+                            mazePath[x][y] = travelled; //checks west
                             direction = 'w';
                             break;
                         }
-                        else if (useableMaze[x + 1][y] == lastStep) {
-                            useableMaze[x + 1][y] = location;
-                            useableMaze[x][y] = lastStep; // checks south
+                        else if (mazePath[x + 1][y] == travelled) {
+                            mazePath[x + 1][y] = location;
+                            mazePath[x][y] = travelled; // checks south
                             direction = 's';
                             break;
                         }
-                        else if (useableMaze[x][y + 1] == lastStep) {
-                            useableMaze[x][y + 1] = location;
-                            useableMaze[x][y] = lastStep; // checks east
+                        else if (mazePath[x][y + 1] == travelled) {
+                            mazePath[x][y + 1] = location;
+                            mazePath[x][y] = travelled; // checks east
                             direction = 'e';
                             break;
                         }
-                        if (useableMaze[x - 1][y] == lastStep) {
-                            useableMaze[x - 1][y] = location;
-                            useableMaze[x][y] = lastStep; //checks north
+                        if (mazePath[x - 1][y] == travelled) {
+                            mazePath[x - 1][y] = location;
+                            mazePath[x][y] = travelled; //checks north
                             direction = 'n';
                             break;
                         }
@@ -87,47 +74,47 @@ public class Maze {
                 /*If the direction is changed to west, if will follow the same logic as when the direction
                 was south, except changed to follow west(left) being the forward direction.
                  */
-                if (useableMaze[x][y] == location && direction == 'w') {
-                    if (useableMaze[x - 1][y] == path) {
-                        useableMaze[x - 1][y] = location;
-                        useableMaze[x][y] = lastStep;
+                if (mazePath[x][y] == location && direction == 'w') {
+                    if (mazePath[x - 1][y] == path) {
+                        mazePath[x - 1][y] = location;
+                        mazePath[x][y] = travelled;
                         direction = 'n';
                         break;
                     }
-                    else if (useableMaze[x][y - 1] == path) {
-                        useableMaze[x][y - 1] = location;
-                        useableMaze[x][y] = lastStep;
+                    else if (mazePath[x][y - 1] == path) {
+                        mazePath[x][y - 1] = location;
+                        mazePath[x][y] = travelled;
                         direction = 'w';
                         break;
                     }
-                    else if (useableMaze[x + 1][y] == path) {
-                        useableMaze[x + 1][y] = location;
-                        useableMaze[x][y] = lastStep;
+                    else if (mazePath[x + 1][y] == path) {
+                        mazePath[x + 1][y] = location;
+                        mazePath[x][y] = travelled;
                         direction = 's';
                         break;
                     }
                     else {
-                        if (useableMaze[x - 1][y] == lastStep) {
-                            useableMaze[x - 1][y] = location;
-                            useableMaze[x][y] = lastStep; //checks north
+                        if (mazePath[x - 1][y] == travelled) {
+                            mazePath[x - 1][y] = location;
+                            mazePath[x][y] = travelled; //checks north
                             direction = 'n';
                             break;
                         }
-                        else if (useableMaze[x][y - 1] == lastStep) {
-                            useableMaze[x][y - 1] = location;
-                            useableMaze[x][y] = lastStep; //checks west
+                        else if (mazePath[x][y - 1] == travelled) {
+                            mazePath[x][y - 1] = location;
+                            mazePath[x][y] = travelled; //checks west
                             direction = 'w';
                             break;
                         }
-                        else if (useableMaze[x + 1][y] == lastStep) {
-                            useableMaze[x + 1][y] = location;
-                            useableMaze[x][y] = lastStep; // checks south
+                        else if (mazePath[x + 1][y] == travelled) {
+                            mazePath[x + 1][y] = location;
+                            mazePath[x][y] = travelled; // checks south
                             direction = 's';
                             break;
                         }
-                        else if (useableMaze[x][y + 1] == lastStep) {
-                            useableMaze[x][y + 1] = location;
-                            useableMaze[x][y] = lastStep; // checks east
+                        else if (mazePath[x][y + 1] == travelled) {
+                            mazePath[x][y + 1] = location;
+                            mazePath[x][y] = travelled; // checks east
                             direction = 'e';
                             break;
                         }
@@ -138,47 +125,47 @@ public class Maze {
                 there is nothing changed from the following logic.
                  */
 
-                if (useableMaze[x][y] == location && direction == 'e') {
-                    if (useableMaze[x + 1][y] == path) {
-                        useableMaze[x + 1][y] = location;
-                        useableMaze[x][y] = lastStep;
+                if (mazePath[x][y] == location && direction == 'e') {
+                    if (mazePath[x + 1][y] == path) {
+                        mazePath[x + 1][y] = location;
+                        mazePath[x][y] = travelled;
                         direction = 's';
                         break;
                     }
-                    else if (useableMaze[x][y + 1] == path) {
-                        useableMaze[x][y + 1] = location;
-                        useableMaze[x][y] = lastStep;
+                    else if (mazePath[x][y + 1] == path) {
+                        mazePath[x][y + 1] = location;
+                        mazePath[x][y] = travelled;
                         direction = 'e';
                         break;
                     }
-                    else if (useableMaze[x - 1][y] == path) {
-                        useableMaze[x - 1][y] = location;
-                        useableMaze[x][y] = lastStep;
+                    else if (mazePath[x - 1][y] == path) {
+                        mazePath[x - 1][y] = location;
+                        mazePath[x][y] = travelled;
                         direction = 'n';
                         break;
                     }
                     else {
-                        if (useableMaze[x + 1][y] == lastStep) {
-                            useableMaze[x + 1][y] = location;
-                            useableMaze[x][y] = lastStep; // checks south
+                        if (mazePath[x + 1][y] == travelled) {
+                            mazePath[x + 1][y] = location;
+                            mazePath[x][y] = travelled; // checks south
                             direction = 's';
                             break;
                         }
-                        else if(useableMaze[x][y + 1] == lastStep) {
-                            useableMaze[x][y + 1] = location;
-                            useableMaze[x][y] = lastStep; // checks east
+                        else if(mazePath[x][y + 1] == travelled) {
+                            mazePath[x][y + 1] = location;
+                            mazePath[x][y] = travelled; // checks east
                             direction = 'e';
                             break;
                         }
-                        else if (useableMaze[x - 1][y] == lastStep) {
-                            useableMaze[x - 1][y] = location;
-                            useableMaze[x][y] = lastStep; //checks north
+                        else if (mazePath[x - 1][y] == travelled) {
+                            mazePath[x - 1][y] = location;
+                            mazePath[x][y] = travelled; //checks north
                             direction = 'n';
                             break;
                         }
-                        else if (useableMaze[x][y - 1] == lastStep) {
-                            useableMaze[x][y - 1] = location;
-                            useableMaze[x][y] = lastStep; //checks west
+                        else if (mazePath[x][y - 1] == travelled) {
+                            mazePath[x][y - 1] = location;
+                            mazePath[x][y] = travelled; //checks west
                             direction = 'w';
                             break;
                         }
@@ -190,47 +177,47 @@ public class Maze {
                  */
 
 
-                if (useableMaze[x][y] == location && direction == 'n') {
-                    if (useableMaze[x][y + 1] == path) {
-                        useableMaze[x][y + 1] = location;
-                        useableMaze[x][y] = lastStep;
+                if (mazePath[x][y] == location && direction == 'n') {
+                    if (mazePath[x][y + 1] == path) {
+                        mazePath[x][y + 1] = location;
+                        mazePath[x][y] = travelled;
                         direction = 'e';
                         break;
                     }
-                    else if (useableMaze[x - 1][y] == path) {
-                        useableMaze[x - 1][y] = location;
-                        useableMaze[x][y] = lastStep;
+                    else if (mazePath[x - 1][y] == path) {
+                        mazePath[x - 1][y] = location;
+                        mazePath[x][y] = travelled;
                         direction = 'n';
                         break;
                     }
-                    else if (useableMaze[x][y - 1] == path) {
-                        useableMaze[x][y - 1] = location;
-                        useableMaze[x][y] = lastStep;
+                    else if (mazePath[x][y - 1] == path) {
+                        mazePath[x][y - 1] = location;
+                        mazePath[x][y] = travelled;
                         direction = 'w';
                         break;
                     }
                     else {
-                        if (useableMaze[x][y + 1] == lastStep) {
-                            useableMaze[x][y + 1] = location;
-                            useableMaze[x][y] = lastStep; // checks east
+                        if (mazePath[x][y + 1] == travelled) {
+                            mazePath[x][y + 1] = location;
+                            mazePath[x][y] = travelled; // checks east
                             direction = 'e';
                             break;
                         }
-                        else if (useableMaze[x - 1][y] == lastStep) {
-                            useableMaze[x - 1][y] = location;
-                            useableMaze[x][y] = lastStep; //checks north
+                        else if (mazePath[x - 1][y] == travelled) {
+                            mazePath[x - 1][y] = location;
+                            mazePath[x][y] = travelled; //checks north
                             direction = 'n';
                             break;
                         }
-                        else if (useableMaze[x][y - 1] == lastStep) {
-                            useableMaze[x][y - 1] = location;
-                            useableMaze[x][y] = lastStep; //checks west
+                        else if (mazePath[x][y - 1] == travelled) {
+                            mazePath[x][y - 1] = location;
+                            mazePath[x][y] = travelled; //checks west
                             direction = 'w';
                             break;
                         }
-                        else if (useableMaze[x + 1][y] == lastStep) {
-                            useableMaze[x + 1][y] = location;
-                            useableMaze[x][y] = lastStep; // checks south
+                        else if (mazePath[x + 1][y] == travelled) {
+                            mazePath[x + 1][y] = location;
+                            mazePath[x][y] = travelled; // checks south
                             direction = 's';
                             break;
                         }
@@ -239,20 +226,34 @@ public class Maze {
             }
         }
         //after each step, the display method is called to run the display for each step
-        System.out.print(this.display());
+        this.display();
     }
 
 
-    public String display(){
-        String tempString = "";
-
-        for (int i = 0; i < useableMaze.length; i++){
-            tempString += "\n";
-            for (int j = 0; j < useableMaze[0].length; j++){
-                tempString += useableMaze[i][j];
+    public void display(){
+        for(int i = 0; i < mazePath.length; i++){
+            // select row
+            for(int j = 0; j < mazePath[i].length; j++) {
+                // select column
+                switch(mazePath[i][j]){
+                    case 0:
+                        System.out.print("#");
+                        break;
+                    case 1:
+                        System.out.print(" ");
+                        break;
+                    case 2:
+                        System.out.print("~");
+                        break;
+                    case 3:
+                        System.out.print("@");
+                        break;
+                    case 4:
+                        System.out.print("G");
+                }
             }
+            System.out.println("");
         }
-        return tempString;
     }
 }
 
