@@ -25,7 +25,7 @@ public class Maze {
             if(mazePath[lastRow][j] == path){
                 goalX = lastRow;
                 goalY = j;
-//                mazePath[goalX][goalY] = goal;
+                mazePath[goalX][goalY] = goal;
             }
         }
     }
@@ -34,7 +34,6 @@ public class Maze {
         allowedToMove = true;
         for (int x = 0; x < mazePath.length; x++) {
             for (int y = 0; y < mazePath[0].length; y++) {
-
                 /*This is the first check where the maze checks the direction of you facing south
                 When there is no place to move that is new, it will backstep without changing the
                 direction. When a new place is found, to then changes the direction */

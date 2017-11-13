@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16770da7-eea7-4d05-bb8c-aa1da5cc2861" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MazeProject/Maze.class" afterPath="$PROJECT_DIR$/out/production/MazeProject/Maze.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MazeProject/MazeGUI.class" afterPath="$PROJECT_DIR$/out/production/MazeProject/MazeGUI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MazeProject/MazePane.class" afterPath="$PROJECT_DIR$/out/production/MazeProject/MazePane.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MazeProject/TestMaze.class" afterPath="$PROJECT_DIR$/out/production/MazeProject/TestMaze.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="16770da7-eea7-4d05-bb8c-aa1da5cc2861" name="Default" comment="MazeGUI updated. Maze generates appropriate spaces for initial condition. Buttons are in place and ready for functionality programming.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Maze.java" afterPath="$PROJECT_DIR$/src/Maze.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MazeGUI.java" afterPath="$PROJECT_DIR$/src/MazeGUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TestMaze.java" afterPath="$PROJECT_DIR$/src/TestMaze.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,33 +21,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Maze.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Maze.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Maze.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="47" column="45" lean-forward="true" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
+            <state relative-caret-position="702">
+              <caret line="27" column="16" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
               <folding>
                 <element signature="method#display#0;class#Maze#0" expanded="false" />
-                <marker date="1510585577578" expanded="true" signature="1115:11570" ph="{...}" />
-                <marker date="1510585577578" expanded="true" signature="1543:3931" ph="{...}" />
-                <marker date="1510585577578" expanded="true" signature="4235:6502" ph="{...}" />
-                <marker date="1510585577578" expanded="true" signature="6767:9034" ph="{...}" />
-                <marker date="1510585577578" expanded="true" signature="9288:11555" ph="{...}" />
+                <marker date="1510592155425" expanded="true" signature="1113:11567" ph="{...}" />
+                <marker date="1510592155425" expanded="true" signature="1540:3928" ph="{...}" />
+                <marker date="1510592155425" expanded="false" signature="4232:6499" ph="{...}" />
+                <marker date="1510592155425" expanded="false" signature="6764:9031" ph="{...}" />
+                <marker date="1510592155425" expanded="false" signature="9285:11552" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MazeGUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MazeGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MazeGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="84" column="30" lean-forward="false" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="30" />
+            <state relative-caret-position="611">
+              <caret line="153" column="30" lean-forward="false" selection-start-line="153" selection-start-column="30" selection-end-line="153" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1621#2924#0" expanded="false" />
                 <element signature="e#2954#3060#0" expanded="false" />
-                <element signature="method#updateImages#0;class#MazePane#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -62,7 +55,7 @@
       <file leaf-file-name="TestMaze.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TestMaze.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-396">
+            <state relative-caret-position="-175">
               <caret line="27" column="69" lean-forward="false" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
               <folding />
             </state>
@@ -109,8 +102,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/unclutteredWork.java" />
         <option value="$PROJECT_DIR$/src/TestMaze.java" />
-        <option value="$PROJECT_DIR$/src/Maze.java" />
         <option value="$PROJECT_DIR$/src/MazeGUI.java" />
+        <option value="$PROJECT_DIR$/src/Maze.java" />
       </list>
     </option>
   </component>
@@ -635,7 +628,7 @@
       <workItem from="1510367346816" duration="8951000" />
       <workItem from="1510423312452" duration="6041000" />
       <workItem from="1510547327568" duration="497000" />
-      <workItem from="1510550554124" duration="2480000" />
+      <workItem from="1510550554124" duration="4350000" />
     </task>
     <task id="LOCAL-00001" summary="idea update">
       <created>1510367435222</created>
@@ -662,7 +655,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34194000" />
+    <option name="totallyTimeSpent" value="36064000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1933" height="1053" extended-state="7" />
@@ -676,7 +669,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43333334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43333334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -728,11 +721,11 @@
           <caret line="244" column="18" lean-forward="false" selection-start-line="244" selection-start-column="18" selection-end-line="244" selection-end-column="18" />
           <folding>
             <element signature="method#display#0;class#Maze#0" expanded="false" />
-            <marker date="1510585577578" expanded="true" signature="1115:11570" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="1543:3931" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="4235:6502" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="6767:9034" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="9288:11555" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1113:11567" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1540:3928" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="4232:6499" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="6764:9031" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="9285:11552" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -745,7 +738,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1621#2924#0" expanded="false" />
             <element signature="e#2954#3060#0" expanded="false" />
-            <element signature="method#updateImages#0;class#MazePane#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -764,11 +756,11 @@
           <caret line="89" column="103" lean-forward="false" selection-start-line="89" selection-start-column="103" selection-end-line="89" selection-end-column="103" />
           <folding>
             <element signature="method#display#0;class#Maze#0" expanded="false" />
-            <marker date="1510585577578" expanded="true" signature="1115:11570" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="1543:3931" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="4235:6502" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="6767:9034" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="9288:11555" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1113:11567" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1540:3928" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="4232:6499" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="6764:9031" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="9285:11552" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -789,7 +781,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1621#2924#0" expanded="false" />
             <element signature="e#2954#3060#0" expanded="false" />
-            <element signature="method#updateImages#0;class#MazePane#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -800,11 +791,11 @@
           <caret line="246" column="15" lean-forward="false" selection-start-line="246" selection-start-column="15" selection-end-line="246" selection-end-column="15" />
           <folding>
             <element signature="method#display#0;class#Maze#0" expanded="false" />
-            <marker date="1510585577578" expanded="true" signature="1115:11570" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="1543:3931" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="4235:6502" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="6767:9034" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="9288:11555" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1113:11567" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1540:3928" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="4232:6499" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="6764:9031" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="9285:11552" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -830,7 +821,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1621#2924#0" expanded="false" />
             <element signature="e#2954#3060#0" expanded="false" />
-            <element signature="method#updateImages#0;class#MazePane#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -841,11 +831,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#display#0;class#Maze#0" expanded="false" />
-            <marker date="1510585577578" expanded="true" signature="1115:11570" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="1543:3931" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="4235:6502" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="6767:9034" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="9288:11555" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1113:11567" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1540:3928" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="4232:6499" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="6764:9031" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="9285:11552" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -864,11 +854,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#display#0;class#Maze#0" expanded="false" />
-            <marker date="1510585577578" expanded="true" signature="1115:11570" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="1543:3931" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="4235:6502" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="6767:9034" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="9288:11555" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1113:11567" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1540:3928" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="4232:6499" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="6764:9031" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="9285:11552" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -887,11 +877,11 @@
           <caret line="232" column="31" lean-forward="true" selection-start-line="232" selection-start-column="31" selection-end-line="232" selection-end-column="31" />
           <folding>
             <element signature="method#display#0;class#Maze#0" expanded="false" />
-            <marker date="1510585577578" expanded="true" signature="1115:11570" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="1543:3931" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="4235:6502" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="6767:9034" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="9288:11555" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1113:11567" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1540:3928" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="4232:6499" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="6764:9031" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="9285:11552" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -910,11 +900,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#display#0;class#Maze#0" expanded="false" />
-            <marker date="1510585577578" expanded="true" signature="1115:11570" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="1543:3931" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="4235:6502" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="6767:9034" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="9288:11555" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1113:11567" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1540:3928" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="4232:6499" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="6764:9031" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="9285:11552" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -933,11 +923,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#display#0;class#Maze#0" expanded="false" />
-            <marker date="1510585577578" expanded="true" signature="1115:11570" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="1543:3931" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="4235:6502" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="6767:9034" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="9288:11555" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1113:11567" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1540:3928" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="4232:6499" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="6764:9031" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="9285:11552" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -956,11 +946,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#display#0;class#Maze#0" expanded="false" />
-            <marker date="1510585577578" expanded="true" signature="1115:11570" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="1543:3931" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="4235:6502" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="6767:9034" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="9288:11555" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1113:11567" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1540:3928" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="4232:6499" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="6764:9031" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="9285:11552" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -979,11 +969,11 @@
           <caret line="77" column="26" lean-forward="false" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
           <folding>
             <element signature="method#display#0;class#Maze#0" expanded="false" />
-            <marker date="1510585577578" expanded="true" signature="1115:11570" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="1543:3931" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="4235:6502" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="6767:9034" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="9288:11555" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1113:11567" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1540:3928" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="4232:6499" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="6764:9031" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="9285:11552" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1002,11 +992,11 @@
           <caret line="77" column="26" lean-forward="false" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
           <folding>
             <element signature="method#display#0;class#Maze#0" expanded="false" />
-            <marker date="1510585577578" expanded="true" signature="1115:11570" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="1543:3931" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="4235:6502" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="6767:9034" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="9288:11555" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1113:11567" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1540:3928" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="4232:6499" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="6764:9031" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="9285:11552" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1025,11 +1015,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#display#0;class#Maze#0" expanded="false" />
-            <marker date="1510585577578" expanded="true" signature="1115:11570" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="1543:3931" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="4235:6502" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="6767:9034" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="9288:11555" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1113:11567" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1540:3928" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="4232:6499" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="6764:9031" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="9285:11552" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1048,11 +1038,11 @@
           <caret line="53" column="26" lean-forward="false" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
           <folding>
             <element signature="method#display#0;class#Maze#0" expanded="false" />
-            <marker date="1510585577578" expanded="true" signature="1115:11570" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="1543:3931" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="4235:6502" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="6767:9034" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="9288:11555" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1113:11567" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1540:3928" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="4232:6499" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="6764:9031" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="9285:11552" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1071,11 +1061,11 @@
           <caret line="53" column="26" lean-forward="false" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
           <folding>
             <element signature="method#display#0;class#Maze#0" expanded="false" />
-            <marker date="1510585577578" expanded="true" signature="1115:11570" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="1543:3931" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="4235:6502" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="6767:9034" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="9288:11555" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1113:11567" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1540:3928" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="4232:6499" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="6764:9031" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="9285:11552" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1112,24 +1102,17 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maze.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/control/ButtonBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="47" column="45" lean-forward="true" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
-          <folding>
-            <element signature="method#display#0;class#Maze#0" expanded="false" />
-            <marker date="1510585577578" expanded="true" signature="1115:11570" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="1543:3931" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="4235:6502" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="6767:9034" ph="{...}" />
-            <marker date="1510585577578" expanded="true" signature="9288:11555" ph="{...}" />
-          </folding>
+        <state relative-caret-position="295">
+          <caret line="120" column="22" lean-forward="false" selection-start-line="120" selection-start-column="22" selection-end-line="120" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TestMaze.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-396">
+        <state relative-caret-position="-175">
           <caret line="27" column="69" lean-forward="false" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
           <folding />
         </state>
@@ -1137,13 +1120,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MazeGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="84" column="30" lean-forward="false" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="30" />
+        <state relative-caret-position="611">
+          <caret line="153" column="30" lean-forward="false" selection-start-line="153" selection-start-column="30" selection-end-line="153" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1621#2924#0" expanded="false" />
             <element signature="e#2954#3060#0" expanded="false" />
-            <element signature="method#updateImages#0;class#MazePane#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="27" column="16" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+          <folding>
+            <element signature="method#display#0;class#Maze#0" expanded="false" />
+            <marker date="1510592155425" expanded="true" signature="1113:11567" ph="{...}" />
+            <marker date="1510592155425" expanded="true" signature="1540:3928" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="4232:6499" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="6764:9031" ph="{...}" />
+            <marker date="1510592155425" expanded="false" signature="9285:11552" ph="{...}" />
           </folding>
         </state>
       </provider>

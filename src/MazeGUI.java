@@ -102,6 +102,7 @@ class MazePane extends GridPane {
     private Image wallImg = new Image("img/stonetexture.JPG");
     private Image pathImg = new Image("img/pathtexture.jpg");
     private Image currentPathImg = new Image("img/currentPathTexture.jpg");
+    private Image goalImage = new Image("img/goaltexture.jpg");
     private int[][] mazePath = {
             {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
             {0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0},
@@ -146,6 +147,10 @@ class MazePane extends GridPane {
                     case 3:
                         // current position
                         add(new ImageView(currentPathImg), j, i);
+                        break;
+                    case 4:
+                        // goal
+                        add(new ImageView(goalImage), j , i);
                         break;
                 }
             }
