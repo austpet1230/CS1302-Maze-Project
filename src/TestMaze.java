@@ -49,6 +49,11 @@ public class TestMaze {
                 case "d":
                     maze.display();
                     break;
+                case "A":
+                    for(int i = 0; i < 5; i++){
+                        maze.takeStep();
+                    }
+                    break;
                 case "x":
                     System.out.println("User terminated program.");
                     System.exit(-1);

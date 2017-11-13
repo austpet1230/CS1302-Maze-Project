@@ -59,6 +59,10 @@ public class MazeGUI extends Application{
             btTakeStep.setPrefSize(200, 30);
             btTakeStep.setStyle("-fx-base: #5eceff");
 
+            Button bt5TakeStep = new Button("Take 5 Steps");
+            bt5TakeStep.setPrefSize(200, 30);
+            bt5TakeStep.setStyle("-fx-base: #5eceff");
+
             Button btSolveMaze = new Button("Solve Maze");
             btSolveMaze.setPrefSize(200, 30);
             btSolveMaze.setStyle("-fx-base: #51ff7f");
@@ -73,8 +77,13 @@ public class MazeGUI extends Application{
             btTakeStep.setOnAction(step->{
                 mazePane.takeStep();
             });
+            bt5TakeStep.setOnAction(s->{
+                for(int i = 0; i < 10; i++){
+                    mazePane.takeStep();
+                }
+            });
 
-            gameButtons.getChildren().addAll(btTakeStep, btSolveMaze, btGiveUp, txtMoveLabel, txtMoveCount);
+            gameButtons.getChildren().addAll(btTakeStep, bt5TakeStep, btSolveMaze, btGiveUp, txtMoveLabel, txtMoveCount);
 
             gameLayout.setBottom(gameButtons);
 
