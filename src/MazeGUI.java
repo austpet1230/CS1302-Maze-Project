@@ -59,8 +59,6 @@ public class MazeGUI extends Application{
             btTakeStep.setPrefSize(200, 30);
             btTakeStep.setStyle("-fx-base: #5eceff");
 
-            btTakeStep.setOnAction(step->mazePane.takeStep());
-
             Button btSolveMaze = new Button("Solve Maze");
             btSolveMaze.setPrefSize(200, 30);
             btSolveMaze.setStyle("-fx-base: #51ff7f");
@@ -68,13 +66,25 @@ public class MazeGUI extends Application{
             Button btGiveUp = new Button("Give Up");
             btGiveUp.setPrefSize(200, 30);
             btGiveUp.setStyle("-fx-base: #ff7351");
-            gameButtons.getChildren().addAll(btTakeStep, btSolveMaze, btGiveUp);
+
+            Text txtMoveLabel = new Text("Moves: ");
+            Text txtMoveCount = new Text("0");
+
+            btTakeStep.setOnAction(step->{
+                mazePane.takeStep();
+            });
+
+            gameButtons.getChildren().addAll(btTakeStep, btSolveMaze, btGiveUp, txtMoveLabel, txtMoveCount);
 
             gameLayout.setBottom(gameButtons);
 
             gameScene = new Scene(gameLayout);
             primaryStage.setScene(gameScene);
             primaryStage.show();
+        });
+        btQuit.setOnAction(e->{
+            System.out.println("User terminated GUI program");
+            System.exit(-1);
         });
 
         borderPane.setTop(titleBox);

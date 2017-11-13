@@ -42,7 +42,9 @@ public class TestMaze {
                     maze.takeStep();
                     break;
                 case "c":
-                    //maze.findExit(0,2);
+                    while(!maze.mazeSolved) {
+                        maze.takeStep();
+                    }
                     break;
                 case "d":
                     maze.display();
