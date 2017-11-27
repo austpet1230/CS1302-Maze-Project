@@ -8,9 +8,12 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.media.AudioClip;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
+import java.io.File;
 
 /**********************************************
  * CS 1302 Final Project - The Maze
@@ -21,6 +24,8 @@ import javafx.stage.Stage;
 public class MazeGUI extends Application{
     protected Scene mainMenu, gameScene;
     public int gameSceneW, gameSceneH;
+    private static final String DING_URL = "src/resources/moveSound.mp3";
+    private static final String INTRO_URL = "src/resources/intro.mp3";
 
     @Override
     public void start(Stage primaryStage){
@@ -45,7 +50,11 @@ public class MazeGUI extends Application{
         btQuit.setPrefSize(150,150);
         buttonBox.getChildren().addAll(btStartMaze, btQuit);
 
+        AudioClip dingSound = new AudioClip(new File(DING_URL).toURI().toString());
+        AudioClip introSound = new AudioClip(new File(INTRO_URL).toURI().toString());
+
         btStartMaze.setOnAction(e->{
+            introSound.play();
             // ACTIVATES GAME WINDOW WITH MAZE
             BorderPane gameLayout = new BorderPane();
             MazePane mazePane = new MazePane();
@@ -54,36 +63,62 @@ public class MazeGUI extends Application{
             HBox gameButtons = new HBox(5);
             gameButtons.setAlignment(Pos.CENTER);
             gameButtons.setPadding(new Insets(5));
+            while(introSound.isPlaying()){
+                gameButtons.setDisable(true);
+            }
+            gameButtons.setDisable(false);
 
+            // TAKE STEP BUTTON
             Button btTakeStep = new Button("Take Step");
             btTakeStep.setPrefSize(200, 30);
             btTakeStep.setStyle("-fx-base: #5eceff");
 
-            Button bt5TakeStep = new Button("Take 5 Steps");
+            // TAKE 5 STEP BUTTON
+            Button bt5TakeStep = new Button("Take 10 Steps");
             bt5TakeStep.setPrefSize(200, 30);
             bt5TakeStep.setStyle("-fx-base: #5eceff");
 
+            // AUTO SOLVE MAZE BUTTON
             Button btSolveMaze = new Button("Solve Maze");
             btSolveMaze.setPrefSize(200, 30);
             btSolveMaze.setStyle("-fx-base: #51ff7f");
 
+            // GIVE UP BUTTON
             Button btGiveUp = new Button("Give Up");
             btGiveUp.setPrefSize(200, 30);
             btGiveUp.setStyle("-fx-base: #ff7351");
 
-            Text txtMoveLabel = new Text("Moves: ");
-            Text txtMoveCount = new Text("0");
+            Text txtCoordLabel = new Text("Current Coords: ");
+            Text txtXLabel = new Text("0");
+            Text txtSpace = new Text(" ");
+            Text txtYLabel = new Text("0");
+
+            Text txtGoalLabel = new Text("Goal Coords: ");
+            Text txtGXLabel = new Text("0");
+            Text txtGSpace = new Text(" ");
+            Text txtGYLabel = new Text("0");
 
             btTakeStep.setOnAction(step->{
                 mazePane.takeStep();
-            });
-            bt5TakeStep.setOnAction(s->{
-                for(int i = 0; i < 10; i++){
-                    mazePane.takeStep();
-                }
+                txtXLabel.setText(Integer.toString(mazePane.getCurrentXCoord()));
+                txtYLabel.setText(Integer.toString(mazePane.getCurrentYCoord()));
+                txtGXLabel.setText(Integer.toString(mazePane.getGoalXCoord()));
+                txtGYLabel.setText(Integer.toString(mazePane.getGoalYCoord()));
+                dingSound.play();
             });
 
-            gameButtons.getChildren().addAll(btTakeStep, bt5TakeStep, btSolveMaze, btGiveUp, txtMoveLabel, txtMoveCount);
+            bt5TakeStep.setOnAction(s->{
+                for(int i = 0; i < 10; i++){
+                    txtXLabel.setText(Integer.toString(mazePane.getCurrentXCoord()));
+                    txtYLabel.setText(Integer.toString(mazePane.getCurrentYCoord()));
+                    txtGXLabel.setText(Integer.toString(mazePane.getGoalXCoord()));
+                    txtGYLabel.setText(Integer.toString(mazePane.getGoalYCoord()));
+                    mazePane.takeStep();
+                }
+                dingSound.play();
+            });
+
+            gameButtons.getChildren().addAll(btTakeStep, bt5TakeStep, btSolveMaze, btGiveUp, txtCoordLabel, txtXLabel, txtSpace, txtYLabel, txtGoalLabel, txtGXLabel, txtGSpace, txtGYLabel);
 
             gameLayout.setBottom(gameButtons);
 
@@ -108,10 +143,10 @@ public class MazeGUI extends Application{
 
 class MazePane extends GridPane {
     private Maze maze;
-    private Image wallImg = new Image("img/stonetexture.JPG");
-    private Image pathImg = new Image("img/pathtexture.jpg");
-    private Image currentPathImg = new Image("img/currentPathTexture.jpg");
-    private Image goalImage = new Image("img/goaltexture.jpg");
+    private Image wallImg = new Image("resources/stonetexture.JPG");
+    private Image pathImg = new Image("resources/pathtexture.jpg");
+    private Image currentPathImg = new Image("resources/currentPathTexture.jpg");
+    private Image goalImage = new Image("resources/goaltexture.jpg");
     private int[][] mazePath = {
             {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
             {0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0},
@@ -169,5 +204,19 @@ class MazePane extends GridPane {
     public void takeStep(){
         maze.takeStep();
         updateImages();
+    }
+
+    public int getCurrentXCoord(){
+        return maze.currentX;
+    }
+    public int getCurrentYCoord(){
+        return maze.currentY;
+    }
+
+    public int getGoalXCoord(){
+        return maze.goalX;
+    }
+    public int getGoalYCoord(){
+        return maze.goalY;
     }
 }

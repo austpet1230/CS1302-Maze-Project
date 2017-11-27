@@ -8,7 +8,7 @@ public class Maze {
 
     private int[][] mazePath;
     private int wall = 0, path = 1, travelled = 2, currentPos = 3, goal = 4;
-    private int goalX, goalY, currentX, currentY;
+    protected int goalX, goalY, currentX, currentY;
     private char direction = 's';
     protected boolean mazeSolved = false, allowedToMove = false;
 
@@ -22,9 +22,9 @@ public class Maze {
         int lastRow = mazePath.length - 1;
         for(int j = 0; j < mazePath[lastRow].length; j++){
             if(mazePath[lastRow][j] == path){
-                goalX = lastRow;
-                goalY = j;
-                mazePath[goalX][goalY] = goal;
+                goalX = j;
+                goalY = lastRow;
+                //mazePath[goalY][goalX] = goal;
             }
         }
     }
@@ -34,7 +34,7 @@ public class Maze {
         for (int x = 0; x < mazePath.length; x++) {
             for (int y = 0; y < mazePath[0].length; y++) {
                 getCurrentLocation();
-                if(currentX + 1 == goalX && currentY + 1 == goalY){
+                if(currentX == goalX && currentY == goalY){
                     mazeSolved = true;
                     System.exit(3);
                 }
@@ -253,8 +253,8 @@ public class Maze {
         for(int i = 0; i < mazePath.length; i++){
             for(int j = 0; j < mazePath[i].length; j++){
                 if(mazePath[i][j] == 3){
-                    currentX = i;
-                    currentY = j;
+                    currentX = j;
+                    currentY = i;
                 }
             }
         }
