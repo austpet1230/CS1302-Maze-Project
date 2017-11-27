@@ -36,7 +36,7 @@ public class Maze {
                 getCurrentLocation();
                 if(currentX == goalX && currentY == goalY){
                     mazeSolved = true;
-                    System.exit(3);
+                    //System.exit(3);
                 }
 
                 /*This is the first check where the maze checks the direction of you facing south

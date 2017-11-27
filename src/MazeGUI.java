@@ -5,16 +5,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.*;
 import javafx.scene.media.AudioClip;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.File;
-
 /**********************************************
  * CS 1302 Final Project - The Maze
  * Created by Jack Smith and Austin Pettit
@@ -22,10 +20,10 @@ import java.io.File;
  * Fall 2017
  *********************************************/
 public class MazeGUI extends Application{
-    protected Scene mainMenu, gameScene;
-    public int gameSceneW, gameSceneH;
+    private Scene mainMenu, gameScene, winScene;
     private static final String DING_URL = "src/resources/moveSound.mp3";
     private static final String INTRO_URL = "src/resources/intro.mp3";
+    private static final String WIN_URL = "src/resources/winMusic.mp3";
 
     @Override
     public void start(Stage primaryStage){
@@ -33,33 +31,45 @@ public class MazeGUI extends Application{
         BorderPane borderPane = new BorderPane();
 
         // TITLE BAR
-        HBox titleBox = new HBox(5);
+        VBox titleBox = new VBox(5);
         titleBox.setAlignment(Pos.CENTER);
+        titleBox.setPadding(new Insets(10));
         Text txtTitle = new Text("Welcome to the Maze!");
-        txtTitle.setFont(Font.font(25));
-        titleBox.getChildren().addAll(txtTitle);
+        txtTitle.setFont(Font.font("Trebuchet MS", FontWeight.BOLD, 30));
+        Text txtMadeBy = new Text("Made by Austin & Jack for CS 1302 - Fall 2017");
+        txtMadeBy.setFont(Font.font("Trebuchet MS", 22));
+        titleBox.getChildren().addAll(txtTitle, txtMadeBy);
 
         // BUTTON PANEL
-        HBox buttonBox = new HBox(10);
+        VBox buttonBox = new VBox(10);
         buttonBox.setAlignment(Pos.CENTER);
         Button btStartMaze = new Button("Start Maze");
         btStartMaze.setStyle("-fx-base: #43ef6b");
-        btStartMaze.setPrefSize(150,150);
+        btStartMaze.setPrefSize(400,75);
         Button btQuit = new Button("Quit");
         btQuit.setStyle("-fx-base: #ef5f43");
-        btQuit.setPrefSize(150,150);
+        btQuit.setPrefSize(400,35);
         buttonBox.getChildren().addAll(btStartMaze, btQuit);
 
+        // AUDIO CLIP VARS
         AudioClip dingSound = new AudioClip(new File(DING_URL).toURI().toString());
         AudioClip introSound = new AudioClip(new File(INTRO_URL).toURI().toString());
+        AudioClip winSound = new AudioClip(new File(WIN_URL).toURI().toString());
 
         btStartMaze.setOnAction(e->{
             introSound.play();
+
             // ACTIVATES GAME WINDOW WITH MAZE
             BorderPane gameLayout = new BorderPane();
             MazePane mazePane = new MazePane();
             gameLayout.setCenter(mazePane);
 
+            // HOLDS ALL LOWER PANEL GAME COMPONENTS
+            VBox lowerPanel = new VBox(5);
+            lowerPanel.setAlignment(Pos.CENTER);
+            lowerPanel.setPadding(new Insets(5));
+
+            // HOLDS ALL GAME BUTTONS
             HBox gameButtons = new HBox(5);
             gameButtons.setAlignment(Pos.CENTER);
             gameButtons.setPadding(new Insets(5));
@@ -68,59 +78,130 @@ public class MazeGUI extends Application{
             }
             gameButtons.setDisable(false);
 
+            // HOLDS ALL GAME TEXT ELEMENTS:
+            HBox gameText = new HBox(5);
+            gameText.setAlignment(Pos.CENTER);
+            gameText.setPadding(new Insets(5));
+
+            // GAME COMPONENTS
             // TAKE STEP BUTTON
             Button btTakeStep = new Button("Take Step");
-            btTakeStep.setPrefSize(200, 30);
+            btTakeStep.setPrefSize(300, 30);
             btTakeStep.setStyle("-fx-base: #5eceff");
 
             // TAKE 5 STEP BUTTON
-            Button bt5TakeStep = new Button("Take 10 Steps");
-            bt5TakeStep.setPrefSize(200, 30);
-            bt5TakeStep.setStyle("-fx-base: #5eceff");
+//            Button bt5TakeStep = new Button("Take 10 Steps");
+//            bt5TakeStep.setPrefSize(200, 30);
+//            bt5TakeStep.setStyle("-fx-base: #5effd4");
 
             // AUTO SOLVE MAZE BUTTON
             Button btSolveMaze = new Button("Solve Maze");
-            btSolveMaze.setPrefSize(200, 30);
+            btSolveMaze.setPrefSize(300, 30);
             btSolveMaze.setStyle("-fx-base: #51ff7f");
 
             // GIVE UP BUTTON
             Button btGiveUp = new Button("Give Up");
-            btGiveUp.setPrefSize(200, 30);
+            btGiveUp.setPrefSize(300, 30);
             btGiveUp.setStyle("-fx-base: #ff7351");
 
             Text txtCoordLabel = new Text("Current Coords: ");
-            Text txtXLabel = new Text("0");
-            Text txtSpace = new Text(" ");
-            Text txtYLabel = new Text("0");
+            txtCoordLabel.setFont(Font.font("Arial", FontWeight.BOLD, 12));
+            Text txtCLabel = new Text("(0, 0)");
 
             Text txtGoalLabel = new Text("Goal Coords: ");
-            Text txtGXLabel = new Text("0");
-            Text txtGSpace = new Text(" ");
-            Text txtGYLabel = new Text("0");
+            txtGoalLabel.setFont(Font.font("Arial", FontWeight.BOLD, 12));
+            Text txtGLabel = new Text("(0, 0)");
 
-            btTakeStep.setOnAction(step->{
-                mazePane.takeStep();
-                txtXLabel.setText(Integer.toString(mazePane.getCurrentXCoord()));
-                txtYLabel.setText(Integer.toString(mazePane.getCurrentYCoord()));
-                txtGXLabel.setText(Integer.toString(mazePane.getGoalXCoord()));
-                txtGYLabel.setText(Integer.toString(mazePane.getGoalYCoord()));
-                dingSound.play();
+            Text txtMoveLabel = new Text("Moves: ");
+            txtMoveLabel.setFont(Font.font("Arial", FontWeight.BOLD, 12));
+            Text txtMoveNum = new Text("0");
+
+            btTakeStep.setOnAction(step1->{
+                if(!mazePane.getMazeSolved()){
+                    mazePane.takeStep();
+                    txtCLabel.setText("(" + mazePane.getCurrentXCoord() + ", " + mazePane.getCurrentYCoord() + ")");
+                    txtGLabel.setText("(" + mazePane.getGoalXCoord() + ", " + mazePane.getGoalYCoord() + ")");
+                    txtMoveNum.setText(Integer.toString(mazePane.getMoveCount()));
+                    dingSound.play();
+                } else {
+                    // maze solved
+                    StackPane winPane = new StackPane();
+
+                    VBox winComps = new VBox();
+                    winComps.setAlignment(Pos.CENTER);
+
+                    Text winText = new Text("You completed the maze! \nYou solved it in " + mazePane.getMoveCount() + " steps.");
+                    winText.setFont(Font.font("Arial", FontWeight.BOLD, 40));
+
+                    Text credits = new Text("\n\nMaze Logic Design ........ Jack Smith \n" +
+                            "GUI Design & Implementation ........ Austin Pettit");
+                    credits.setFont(Font.font(22));
+
+                    winComps.getChildren().addAll(winText, credits);
+
+                    winPane.getChildren().addAll(winComps);
+
+                    winSound.play();
+
+                    winScene = new Scene(winPane, 750, 500);
+                    primaryStage.setScene(winScene);
+                    primaryStage.show();
+                }
             });
 
-            bt5TakeStep.setOnAction(s->{
-                for(int i = 0; i < 10; i++){
-                    txtXLabel.setText(Integer.toString(mazePane.getCurrentXCoord()));
-                    txtYLabel.setText(Integer.toString(mazePane.getCurrentYCoord()));
-                    txtGXLabel.setText(Integer.toString(mazePane.getGoalXCoord()));
-                    txtGYLabel.setText(Integer.toString(mazePane.getGoalYCoord()));
+//            bt5TakeStep.setOnAction(step5->{
+//                if(!mazePane.getMazeSolved()) {
+//                    for (int i = 0; i < 10; i++) {
+//                        txtCLabel.setText("(" + mazePane.getCurrentXCoord() + ", " + mazePane.getCurrentYCoord() + ")");
+//                        txtGLabel.setText("(" + mazePane.getGoalXCoord() + ", " + mazePane.getGoalYCoord() + ")");
+//                        txtMoveNum.setText(Integer.toString(mazePane.getMoveCount()));
+//                        mazePane.takeStep();
+//                    }
+//                    dingSound.play();
+//                }
+//            });
+
+            btSolveMaze.setOnAction(solve->{
+                while(!mazePane.getMazeSolved()){
                     mazePane.takeStep();
                 }
-                dingSound.play();
+                if(mazePane.getMazeSolved()){
+                    // maze solved
+                    StackPane winPane = new StackPane();
+
+                    Text winText = new Text("You completed the maze! \nYou solved it in " + mazePane.getMoveCount() + " steps.");
+                    winText.setFont(Font.font("Arial", FontWeight.BOLD, 40));
+
+                    winPane.getChildren().addAll(winText);
+
+                    winSound.play();
+
+                    winScene = new Scene(winPane);
+                    primaryStage.setScene(winScene);
+                    primaryStage.show();
+                }
             });
 
-            gameButtons.getChildren().addAll(btTakeStep, bt5TakeStep, btSolveMaze, btGiveUp, txtCoordLabel, txtXLabel, txtSpace, txtYLabel, txtGoalLabel, txtGXLabel, txtGSpace, txtGYLabel);
+            btGiveUp.setOnAction(giveup->{
+                // maze solved
+                StackPane winPane = new StackPane();
 
-            gameLayout.setBottom(gameButtons);
+                Text winText = new Text("You failed! Better luck next time!");
+                winText.setFont(Font.font("Arial", FontWeight.BOLD, 40));
+
+                winPane.getChildren().addAll(winText);
+
+                winScene = new Scene(winPane);
+                primaryStage.setScene(winScene);
+                primaryStage.show();
+            });
+
+            gameButtons.getChildren().addAll(btTakeStep, btSolveMaze, btGiveUp);
+            gameText.getChildren().addAll(txtCoordLabel, txtCLabel, txtGoalLabel, txtGLabel, txtMoveLabel, txtMoveNum);
+
+            lowerPanel.getChildren().addAll(gameButtons, gameText);
+
+            gameLayout.setBottom(lowerPanel);
 
             gameScene = new Scene(gameLayout);
             primaryStage.setScene(gameScene);
@@ -133,7 +214,7 @@ public class MazeGUI extends Application{
 
         borderPane.setTop(titleBox);
         borderPane.setCenter(buttonBox);
-        mainMenu = new Scene(borderPane, 400,300);
+        mainMenu = new Scene(borderPane, 500,300);
         primaryStage.setScene(mainMenu);
         primaryStage.setResizable(false);
         primaryStage.setTitle("Made by Austin and Jack");
@@ -147,6 +228,7 @@ class MazePane extends GridPane {
     private Image pathImg = new Image("resources/pathtexture.jpg");
     private Image currentPathImg = new Image("resources/currentPathTexture.jpg");
     private Image goalImage = new Image("resources/goaltexture.jpg");
+    private int moveCount = 0;
     private int[][] mazePath = {
             {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
             {0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0},
@@ -160,11 +242,11 @@ class MazePane extends GridPane {
             {0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0},
             {0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0},
             {0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0},
-            {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}};
+            {0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0},
+            {0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0},
+            {0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,1,0,1,0,0,0},
+            {0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1},
+            {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1}};
 
     public MazePane(){
         // create new instance of maze with the maze, mazePath
@@ -202,9 +284,12 @@ class MazePane extends GridPane {
     }
 
     public void takeStep(){
+        moveCount++;
         maze.takeStep();
         updateImages();
     }
+
+    public boolean getMazeSolved() { return maze.mazeSolved; }
 
     public int getCurrentXCoord(){
         return maze.currentX;
@@ -219,4 +304,6 @@ class MazePane extends GridPane {
     public int getGoalYCoord(){
         return maze.goalY;
     }
+
+    public int getMoveCount() { return moveCount; }
 }
