@@ -38,19 +38,16 @@ public class TestMaze {
             switch(dataReader.next()){
                 case "s":
                     maze.takeStep();
+                    maze.display();
                     break;
                 case "c":
                     while(!maze.mazeSolved) {
                         maze.takeStep();
+                        maze.display();
                     }
                     break;
                 case "d":
                     maze.display();
-                    break;
-                case "A":
-                    for(int i = 0; i < 5; i++){
-                        maze.takeStep();
-                    }
                     break;
                 case "x":
                     System.out.println("User terminated program.");

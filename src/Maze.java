@@ -7,7 +7,7 @@
 public class Maze {
 
     private int[][] mazePath;
-    private int wall = 0, path = 1, travelled = 2, currentPos = 3, goal = 4;
+    private int wall = 0, path = 1, travelled = 2, currentPos = 3;
     protected int goalX, goalY, currentX, currentY;
     private char direction = 's';
     protected boolean mazeSolved = false, allowedToMove = false;
@@ -33,12 +33,7 @@ public class Maze {
         allowedToMove = true;
         for (int x = 0; x < mazePath.length; x++) {
             for (int y = 0; y < mazePath[0].length; y++) {
-                getCurrentLocation();
-                if(currentX == goalX && currentY == goalY){
-                    mazeSolved = true;
-                    //System.exit(3);
-                }
-
+                checkMazeSolved();
                 /*This is the first check where the maze checks the direction of you facing south
                 When there is no place to move that is new, it will backstep without changing the
                 direction. When a new place is found, to then changes the direction */
@@ -245,8 +240,56 @@ public class Maze {
                 }
             }
         }
-        //after each step, the display method is called to run the display for each step
-        this.display();
+    }
+
+    public void stepUp(){
+        checkMazeSolved();
+        if(isValidMove(currentX, currentY - 1) && !mazeSolved){
+            if(isValidMove(currentX, currentY - 1)){
+                if(mazePath[currentY - 1][currentX] == path || mazePath[currentY - 1][currentX] == travelled){
+                    mazePath[currentY][currentX] = travelled;
+                    currentY -= 1;
+                    mazePath[currentY][currentX] = currentPos;
+                }
+            }
+        }
+    }
+    public void stepDown(){
+        checkMazeSolved();
+        if(isValidMove(currentX, currentY + 1) && !mazeSolved){
+            if(mazePath[currentY + 1][currentX] == path || mazePath[currentY + 1][currentX] == travelled){
+                mazePath[currentY][currentX] = travelled;
+                currentY += 1;
+                mazePath[currentY][currentX] = currentPos;
+            }
+        }
+    }
+    public void stepLeft(){
+        checkMazeSolved();
+        if(isValidMove(currentX - 1, currentY) && !mazeSolved){
+            if(mazePath[currentY][currentX - 1] == path || mazePath[currentY][currentX - 1] == travelled){
+                mazePath[currentY][currentX] = travelled;
+                currentX -= 1;
+                mazePath[currentY][currentX] = currentPos;
+            }
+        }
+    }
+    public void stepRight(){
+        checkMazeSolved();
+        if(isValidMove(currentX + 1, currentY) && !mazeSolved){
+            if(mazePath[currentY][currentX + 1] == path || mazePath[currentY][currentX + 1] == travelled){
+                mazePath[currentY][currentX] = travelled;
+                currentX += 1;
+                mazePath[currentY][currentX] = currentPos;
+            }
+        }
+    }
+
+    public void checkMazeSolved(){
+        getCurrentLocation();
+        if(currentX == goalX && currentY == goalY){
+            mazeSolved = true;
+        }
     }
 
     public void getCurrentLocation(){
@@ -257,6 +300,18 @@ public class Maze {
                     currentY = i;
                 }
             }
+        }
+    }
+
+    public boolean isValidMove(int x, int y){
+        try{
+            if(mazePath[y][x] == path || mazePath[y][x] == wall || mazePath[y][x] == currentPos || mazePath[y][x] == travelled){
+                return true;
+            } else {
+                return false;
+            }
+        } catch (ArrayIndexOutOfBoundsException ex){
+            return false;
         }
     }
 
