@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16770da7-eea7-4d05-bb8c-aa1da5cc2861" name="Default" comment="">
+    <list default="true" id="16770da7-eea7-4d05-bb8c-aa1da5cc2861" name="Default" comment="MazeGUI updated. Maze generates appropriate spaces for initial condition. Buttons are in place and ready for functionality programming.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mazes.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MazeProject/Maze.class" afterPath="$PROJECT_DIR$/out/production/MazeProject/Maze.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MazeProject/MazeGUI.class" afterPath="$PROJECT_DIR$/out/production/MazeProject/MazeGUI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MazeProject/MazePane.class" afterPath="$PROJECT_DIR$/out/production/MazeProject/MazePane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Maze.java" afterPath="$PROJECT_DIR$/src/Maze.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MazeGUI.java" afterPath="$PROJECT_DIR$/src/MazeGUI.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +29,54 @@
       <file leaf-file-name="Maze.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Maze.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+            <state relative-caret-position="864">
+              <caret line="38" column="22" lean-forward="false" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+              <folding>
+                <element signature="method#display#0;class#Maze#0" expanded="false" />
+                <marker date="1511756203463" expanded="true" signature="1096:12182" ph="{...}" />
+                <marker date="1511756203463" expanded="false" signature="1719:4138" ph="{...}" />
+                <marker date="1511756203463" expanded="false" signature="4444:6844" ph="{...}" />
+                <marker date="1511756203463" expanded="false" signature="7111:9511" ph="{...}" />
+                <marker date="1511756203463" expanded="false" signature="9767:12167" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MazeGUI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MazeGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="988">
+              <caret line="53" column="26" lean-forward="false" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2332#8470#0" expanded="false" />
+                <element signature="e#3503#3524#0" expanded="false" />
+                <element signature="e#4655#6116#0" expanded="false" />
+                <element signature="e#6120#6166#0" expanded="false" />
+                <element signature="e#6785#7525#0" expanded="false" />
+                <element signature="e#7562#8013#0" expanded="false" />
+                <element signature="e#8500#8606#0" expanded="false" />
+                <element signature="method#MazePane#0;class#MazePane#0" expanded="false" />
+                <element signature="method#updateImages#0;class#MazePane#0" expanded="false" />
+                <element signature="method#takeStep#0;class#MazePane#0" expanded="false" />
+                <marker date="1511760622671" expanded="false" signature="1130:1576" ph="..." />
+                <marker date="1511760622671" expanded="false" signature="1614:2018" ph="..." />
+                <marker date="1511760622671" expanded="false" signature="2628:2757" ph="..." />
+                <marker date="1511760622671" expanded="false" signature="2809:3087" ph="..." />
+                <marker date="1511760622671" expanded="false" signature="3146:3269" ph="..." />
+                <marker date="1511760622671" expanded="false" signature="3313:4618" ph="..." />
+                <marker date="1511760622671" expanded="false" signature="9326:10807" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mazes.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mazes.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="419">
+              <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="55" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -33,8 +85,8 @@
       <file leaf-file-name="TestMaze.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TestMaze.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="78">
+              <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="28" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -49,8 +101,30 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>mazeSolved</find>
+      <find>location</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>currentPos</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="Austin-AutoComplete-GUI" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -63,6 +137,8 @@
         <option value="$PROJECT_DIR$/src/unclutteredWork.java" />
         <option value="$PROJECT_DIR$/src/TestMaze.java" />
         <option value="$PROJECT_DIR$/src/Maze.java" />
+        <option value="$PROJECT_DIR$/src/mazes.txt" />
+        <option value="$PROJECT_DIR$/src/MazeGUI.java" />
       </list>
     </option>
   </component>
@@ -73,9 +149,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-6" />
-    <option name="width" value="1190" />
-    <option name="height" value="1048" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -92,26 +168,32 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="MazeProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MazeProject" type="462c0819:PsiDirectoryNode" />
+              <item name="CS1302-Maze-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS1302-Maze-Project" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="MazeProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MazeProject" type="462c0819:PsiDirectoryNode" />
+              <item name="CS1302-Maze-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS1302-Maze-Project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CS1302-Maze-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS1302-Maze-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -122,6 +204,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\austp\OneDrive\_KSU\_Course Content\Fall 2017\CS 1302\Labs\MazeProject\CS1302-Maze-Project\src\resources\img" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -135,7 +222,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestMaze">
+  <component name="RunManager" selected="Application.MazeGUI">
+    <configuration name="MazeGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="MazeGUI" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="MazeProject" />
+      <envs />
+    </configuration>
     <configuration name="TestMaze" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="TestMaze" />
@@ -529,9 +630,14 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Application.TestMaze" />
+      <item index="1" class="java.lang.String" itemvalue="Application.MazeGUI" />
+    </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.TestMaze" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.MazeGUI" />
+        <item index="1" class="java.lang.String" itemvalue="Application.TestMaze" />
       </list>
     </recent_temporary>
   </component>
@@ -558,45 +664,76 @@
       <workItem from="1510342722227" duration="772000" />
       <workItem from="1510348468787" duration="652000" />
       <workItem from="1510355240529" duration="272000" />
-      <workItem from="1510356082541" duration="72000" />
+      <workItem from="1510356082541" duration="297000" />
+      <workItem from="1510367346816" duration="8951000" />
+      <workItem from="1510423312452" duration="6041000" />
+      <workItem from="1510547327568" duration="497000" />
+      <workItem from="1510550554124" duration="7594000" />
+      <workItem from="1511048983336" duration="692000" />
+      <workItem from="1511226050254" duration="4790000" />
+      <workItem from="1511753386992" duration="584000" />
+      <workItem from="1511754055588" duration="6561000" />
     </task>
+    <task id="LOCAL-00001" summary="idea update">
+      <created>1510367435222</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1510367435222</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Changed chars to int's, added menu to TestMaze.java to prevent StringIndexOutOfBoundsException">
+      <created>1510369744499</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1510369744499</updated>
+    </task>
+    <task id="LOCAL-00003" summary="MazeGUI updated. Maze generates appropriate spaces for initial condition. Buttons are in place and ready for functionality programming.">
+      <created>1510382703230</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1510382703230</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16000000" />
+    <option name="totallyTimeSpent" value="51935000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1933" height="1053" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32795697" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43333334" sideWeight="0.50182384" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.772043" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.49817613" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18551329" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26931107" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,9 +742,15 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="idea update" />
+    <MESSAGE value="Changed chars to int's, added menu to TestMaze.java to prevent StringIndexOutOfBoundsException" />
+    <MESSAGE value="MazeGUI updated. Maze generates appropriate spaces for initial condition. Buttons are in place and ready for functionality programming." />
+    <option name="LAST_COMMIT_MESSAGE" value="MazeGUI updated. Maze generates appropriate spaces for initial condition. Buttons are in place and ready for functionality programming." />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -620,7 +763,315 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#display#0;class#Maze#0" expanded="false" />
+            <marker date="1511756203463" expanded="true" signature="1096:12182" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="1719:4138" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="4444:6844" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="7111:9511" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="9767:12167" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestMaze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="43" lean-forward="false" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#display#0;class#Maze#0" expanded="false" />
+            <marker date="1511756203463" expanded="true" signature="1096:12182" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="1719:4138" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="4444:6844" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="7111:9511" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="9767:12167" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MazeGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1638">
+          <caret line="63" column="52" lean-forward="false" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2332#8470#0" expanded="false" />
+            <element signature="e#3503#3524#0" expanded="false" />
+            <element signature="e#4655#6116#0" expanded="false" />
+            <element signature="e#6120#6166#0" expanded="false" />
+            <element signature="e#6785#7525#0" expanded="false" />
+            <element signature="e#7562#8013#0" expanded="false" />
+            <element signature="e#8500#8606#0" expanded="false" />
+            <element signature="method#MazePane#0;class#MazePane#0" expanded="false" />
+            <element signature="method#updateImages#0;class#MazePane#0" expanded="false" />
+            <element signature="method#takeStep#0;class#MazePane#0" expanded="false" />
+            <marker date="1511760622671" expanded="false" signature="1130:1576" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="1614:2018" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="2628:2757" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="2809:3087" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="3146:3269" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="3313:4618" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="9326:10807" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestMaze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#display#0;class#Maze#0" expanded="false" />
+            <marker date="1511756203463" expanded="true" signature="1096:12182" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="1719:4138" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="4444:6844" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="7111:9511" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="9767:12167" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MazeGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2080">
+          <caret line="80" column="37" lean-forward="false" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2332#8470#0" expanded="false" />
+            <element signature="e#3503#3524#0" expanded="false" />
+            <element signature="e#4655#6116#0" expanded="false" />
+            <element signature="e#6120#6166#0" expanded="false" />
+            <element signature="e#6785#7525#0" expanded="false" />
+            <element signature="e#7562#8013#0" expanded="false" />
+            <element signature="e#8500#8606#0" expanded="false" />
+            <element signature="method#MazePane#0;class#MazePane#0" expanded="false" />
+            <element signature="method#updateImages#0;class#MazePane#0" expanded="false" />
+            <element signature="method#takeStep#0;class#MazePane#0" expanded="false" />
+            <marker date="1511760622671" expanded="false" signature="1130:1576" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="1614:2018" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="2628:2757" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="2809:3087" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="3146:3269" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="3313:4618" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="9326:10807" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestMaze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="30" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1534">
+          <caret line="244" column="18" lean-forward="false" selection-start-line="244" selection-start-column="18" selection-end-line="244" selection-end-column="18" />
+          <folding>
+            <element signature="method#display#0;class#Maze#0" expanded="false" />
+            <marker date="1511756203463" expanded="true" signature="1096:12182" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="1719:4138" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="4444:6844" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="7111:9511" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="9767:12167" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MazeGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="910">
+          <caret line="47" column="35" lean-forward="true" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2332#8470#0" expanded="false" />
+            <element signature="e#3503#3524#0" expanded="false" />
+            <element signature="e#4655#6116#0" expanded="false" />
+            <element signature="e#6120#6166#0" expanded="false" />
+            <element signature="e#6785#7525#0" expanded="false" />
+            <element signature="e#7562#8013#0" expanded="false" />
+            <element signature="e#8500#8606#0" expanded="false" />
+            <element signature="method#MazePane#0;class#MazePane#0" expanded="false" />
+            <element signature="method#updateImages#0;class#MazePane#0" expanded="false" />
+            <element signature="method#takeStep#0;class#MazePane#0" expanded="false" />
+            <marker date="1511760622671" expanded="false" signature="1130:1576" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="1614:2018" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="2628:2757" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="2809:3087" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="3146:3269" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="3313:4618" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="9326:10807" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestMaze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1196">
+          <caret line="46" column="21" lean-forward="false" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="89" column="103" lean-forward="false" selection-start-line="89" selection-start-column="103" selection-end-line="89" selection-end-column="103" />
+          <folding>
+            <element signature="method#display#0;class#Maze#0" expanded="false" />
+            <marker date="1511756203463" expanded="true" signature="1096:12182" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="1719:4138" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="4444:6844" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="7111:9511" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="9767:12167" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestMaze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1196">
+          <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MazeGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1586">
+          <caret line="73" column="36" lean-forward="false" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2332#8470#0" expanded="false" />
+            <element signature="e#3503#3524#0" expanded="false" />
+            <element signature="e#4655#6116#0" expanded="false" />
+            <element signature="e#6120#6166#0" expanded="false" />
+            <element signature="e#6785#7525#0" expanded="false" />
+            <element signature="e#7562#8013#0" expanded="false" />
+            <element signature="e#8500#8606#0" expanded="false" />
+            <element signature="method#MazePane#0;class#MazePane#0" expanded="false" />
+            <element signature="method#updateImages#0;class#MazePane#0" expanded="false" />
+            <element signature="method#takeStep#0;class#MazePane#0" expanded="false" />
+            <marker date="1511760622671" expanded="false" signature="1130:1576" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="1614:2018" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="2628:2757" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="2809:3087" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="3146:3269" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="3313:4618" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="9326:10807" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1014">
+          <caret line="246" column="15" lean-forward="false" selection-start-line="246" selection-start-column="15" selection-end-line="246" selection-end-column="15" />
+          <folding>
+            <element signature="method#display#0;class#Maze#0" expanded="false" />
+            <marker date="1511756203463" expanded="true" signature="1096:12182" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="1719:4138" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="4444:6844" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="7111:9511" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="9767:12167" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestMaze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="30" column="91" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="30" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/stonetexture.JPG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MazeGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2886">
+          <caret line="123" column="0" lean-forward="true" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2332#8470#0" expanded="false" />
+            <element signature="e#3503#3524#0" expanded="false" />
+            <element signature="e#4655#6116#0" expanded="false" />
+            <element signature="e#6120#6166#0" expanded="false" />
+            <element signature="e#6785#7525#0" expanded="false" />
+            <element signature="e#7562#8013#0" expanded="false" />
+            <element signature="e#8500#8606#0" expanded="false" />
+            <element signature="method#MazePane#0;class#MazePane#0" expanded="false" />
+            <element signature="method#updateImages#0;class#MazePane#0" expanded="false" />
+            <element signature="method#takeStep#0;class#MazePane#0" expanded="false" />
+            <marker date="1511760622671" expanded="false" signature="1130:1576" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="1614:2018" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="2628:2757" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="2809:3087" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="3146:3269" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="3313:4618" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="9326:10807" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#display#0;class#Maze#0" expanded="false" />
+            <marker date="1511756203463" expanded="true" signature="1096:12182" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="1719:4138" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="4444:6844" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="7111:9511" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="9767:12167" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestMaze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#display#0;class#Maze#0" expanded="false" />
+            <marker date="1511756203463" expanded="true" signature="1096:12182" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="1719:4138" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="4444:6844" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="7111:9511" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="9767:12167" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -636,7 +1087,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6032">
           <caret line="232" column="31" lean-forward="true" selection-start-line="232" selection-start-column="31" selection-end-line="232" selection-end-column="31" />
-          <folding />
+          <folding>
+            <element signature="method#display#0;class#Maze#0" expanded="false" />
+            <marker date="1511756203463" expanded="true" signature="1096:12182" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="1719:4138" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="4444:6844" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="7111:9511" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="9767:12167" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -652,7 +1110,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#display#0;class#Maze#0" expanded="false" />
+            <marker date="1511756203463" expanded="true" signature="1096:12182" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="1719:4138" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="4444:6844" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="7111:9511" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="9767:12167" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -668,7 +1133,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#display#0;class#Maze#0" expanded="false" />
+            <marker date="1511756203463" expanded="true" signature="1096:12182" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="1719:4138" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="4444:6844" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="7111:9511" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="9767:12167" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -684,7 +1156,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#display#0;class#Maze#0" expanded="false" />
+            <marker date="1511756203463" expanded="true" signature="1096:12182" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="1719:4138" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="4444:6844" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="7111:9511" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="9767:12167" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -700,7 +1179,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1309">
           <caret line="77" column="26" lean-forward="false" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="method#display#0;class#Maze#0" expanded="false" />
+            <marker date="1511756203463" expanded="true" signature="1096:12182" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="1719:4138" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="4444:6844" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="7111:9511" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="9767:12167" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -716,7 +1202,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1309">
           <caret line="77" column="26" lean-forward="false" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="method#display#0;class#Maze#0" expanded="false" />
+            <marker date="1511756203463" expanded="true" signature="1096:12182" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="1719:4138" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="4444:6844" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="7111:9511" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="9767:12167" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -732,7 +1225,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#display#0;class#Maze#0" expanded="false" />
+            <marker date="1511756203463" expanded="true" signature="1096:12182" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="1719:4138" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="4444:6844" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="7111:9511" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="9767:12167" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -748,7 +1248,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1113">
           <caret line="53" column="26" lean-forward="false" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="method#display#0;class#Maze#0" expanded="false" />
+            <marker date="1511756203463" expanded="true" signature="1096:12182" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="1719:4138" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="4444:6844" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="7111:9511" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="9767:12167" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -764,7 +1271,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1113">
           <caret line="53" column="26" lean-forward="false" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="method#display#0;class#Maze#0" expanded="false" />
+            <marker date="1511756203463" expanded="true" signature="1096:12182" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="1719:4138" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="4444:6844" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="7111:9511" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="9767:12167" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -777,19 +1291,98 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/unclutteredWork.java" />
+    <entry file="file://$PROJECT_DIR$/src/resources/stonetexture.JPG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/image/ImageView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="584" column="0" lean-forward="false" selection-start-line="584" selection-start-column="0" selection-end-line="584" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/mousesprite.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/pathtexture.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/control/ButtonBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="120" column="22" lean-forward="false" selection-start-line="120" selection-start-column="22" selection-end-line="120" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/media/AudioClip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/TestMaze.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="78">
+          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="28" selection-end-column="89" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mazes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="55" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MazeGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="988">
+          <caret line="53" column="26" lean-forward="false" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2332#8470#0" expanded="false" />
+            <element signature="e#3503#3524#0" expanded="false" />
+            <element signature="e#4655#6116#0" expanded="false" />
+            <element signature="e#6120#6166#0" expanded="false" />
+            <element signature="e#6785#7525#0" expanded="false" />
+            <element signature="e#7562#8013#0" expanded="false" />
+            <element signature="e#8500#8606#0" expanded="false" />
+            <element signature="method#MazePane#0;class#MazePane#0" expanded="false" />
+            <element signature="method#updateImages#0;class#MazePane#0" expanded="false" />
+            <element signature="method#takeStep#0;class#MazePane#0" expanded="false" />
+            <marker date="1511760622671" expanded="false" signature="1130:1576" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="1614:2018" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="2628:2757" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="2809:3087" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="3146:3269" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="3313:4618" ph="..." />
+            <marker date="1511760622671" expanded="false" signature="9326:10807" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Maze.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="864">
+          <caret line="38" column="22" lean-forward="false" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+          <folding>
+            <element signature="method#display#0;class#Maze#0" expanded="false" />
+            <marker date="1511756203463" expanded="true" signature="1096:12182" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="1719:4138" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="4444:6844" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="7111:9511" ph="{...}" />
+            <marker date="1511756203463" expanded="false" signature="9767:12167" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
